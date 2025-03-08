@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock
 from io import StringIO
-from menu_functions import new_Game, displaySaveGames
+from romanGame.menu_functions import new_Game, displaySaveGames
 characters_filename = "character_player.json"
 
 class TestGameFunctions(unittest.TestCase):
