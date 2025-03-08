@@ -1,0 +1,36 @@
+[
+    {
+        "id": "4007bd36-76e4-4116-91fa-afeeb0653a89",
+        "first_name": "Pietrus",
+        "family_name": "Scipio",
+        "gender": "Male",
+        "level": 0,
+        "xp": 0,
+        "attributes": {
+            "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {
+            "npc_relations": {},
+            "factions_relations": {}
+        },
+        "inventory": [],
+        "quests": {
+            "active_quests": [],
+            "completed_quests": []
+        },
+        "reputation": {
+            "military": 0,
+            "noble": 0,
+            "religious": 0,
+            "popular": 0,
+            "feared": 0
+        },
+        "titles": {}
+    }
+]

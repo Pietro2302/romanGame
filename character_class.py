@@ -29,11 +29,12 @@ class Character:
 
     def __str__(self):
         # String representation of the character
-        return (f"ID: {self.id} | Character: {self.first_name} {self.family_name}, Gender: {self.gender}, "
-                f"Level: {self.level} | XP: {self.xp}\n"
-                f"Attributes - STR: {self.attributes['strength']}, DEX: {self.attributes['dexterity']}, "
-                f"CON: {self.attributes['constitution']}, INT: {self.attributes['intelligence']}, "
-                f"WIS: {self.attributes['wisdom']}, CHA: {self.attributes['charisma']}\n"
+        return (f"ID: {self.id} | Character: {self.first_name} {self.family_name}, "
+                f"Gender: {self.gender}, Level: {self.level} | XP: {self.xp}\n"
+                f"Attributes - STR: {self.attributes['strength']}, "
+                f"DEX: {self.attributes['dexterity']}, CON: {self.attributes['constitution']}, "
+                f"INT: {self.attributes['intelligence']}, WIS: {self.attributes['wisdom']}, "
+                f"CHA: {self.attributes['charisma']}\n"
                 f"Skills: {str(self.skills)} | Relationships: {str(self.relationships)}\n"
                 f"Inventory: {str(self.inventory)} | Quests: {str(self.quests)} | "
                 f"Reputation: {str(self.reputation)} | Titles: {str(self.titles)}")
@@ -55,4 +56,3 @@ class Character:
             'reputation': self.reputation.to_dict(),  # Assuming Reputation class has a to_dict method
             'titles': self.titles.to_dict()  # Assuming Titles class has a to_dict method
         }
-
