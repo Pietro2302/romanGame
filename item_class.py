@@ -1,7 +1,7 @@
 class Item:
     def __init__(self, name, item_type, description):
         self.name = name
-        self.item_type = item_type  # Example: 'weapon', 'potion', 'armor', etc.
+        self.item_type = item_type
         self.description = description
 
     def __str__(self):
