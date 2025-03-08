@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from io import StringIO
 from romanGame.menu_functions import new_Game, displaySaveGames
-characters_filename = "character_player.json"
+from common_functions import load_characters
+from styles import narrator_print
 
 class TestGameFunctions(unittest.TestCase):
 
@@ -33,7 +33,7 @@ class TestGameFunctions(unittest.TestCase):
     @patch('styles.narrator_print')
     @patch('questionary.select')
     @patch('os.system')
-    def test_display_save_games_no_saves(self, mock_select, mock_narrator, mock_load):
+    def test_display_save_games_no_saves(self, mock_select, mock_narrator, mock_load, mock_system):
         mock_load.return_value = []  # No saved characters
 
         console = MagicMock()
