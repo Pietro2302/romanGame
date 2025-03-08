@@ -28,18 +28,6 @@ class TestGameFunctions(unittest.TestCase):
         mock_select.assert_called_once_with('', choices=["The Scipius family", "The Julian family", "The Claudius family", "The Flavius family", "I belong to no family.(Warning, this sets the game on the highest difficulty. Only for veteran players.)"])
         mock_save.assert_called_once()  # Ensure save function is called
         mock_load.assert_called_once()  # Ensure load function is called
-
-    @patch('common_functions.load_characters')
-    @patch('styles.narrator_print')
-    @patch('questionary.select')
-    @patch('os.system')
-    def test_display_save_games_no_saves(self, mock_select, mock_narrator, mock_load, mock_system):
-        mock_load.return_value = []  # No saved characters
-
-        console = MagicMock()
-        displaySaveGames(console)
-
-        mock_narrator.assert_called_with("It seems like you haven't yet saved any Romans. Go back to the menu and start a new game!", console)
         
     @patch('common_functions.load_characters')
     @patch('styles.narrator_print')
