@@ -12,9 +12,11 @@ def show_message(title, message, style="bold green"):
     text.append(message, style=style)
     console.print(Panel(text, expand=False))
 
+
 # Function to display interactive choices
 def ask_question(question, choices):
     return questionary.select(question, choices=choices).ask()
+
 
 # Example Game Flow
 console.print("[bold cyan]Welcome to Ancient Rome, traveler![/bold cyan]")
@@ -25,9 +27,17 @@ choice = ask_question("What do you do?", ["Greet them", "Draw your weapon", "Ign
 if choice == "Greet them":
     show_message("Stranger:", "Ah, a friendly soul. You seem like a person of great potential.")
 elif choice == "Draw your weapon":
-    show_message("Stranger:", "Bold... but foolish. You feel a hidden blade press against your back.", "bold red")
+    show_message(
+        "Stranger:",
+        "Bold... but foolish. You feel a hidden blade press against your back.",
+        "bold red"
+    )
 elif choice == "Ignore them":
-    show_message("Stranger:", "Silent type, huh? You might survive here after all.", "bold yellow")
+    show_message(
+        "Stranger:",
+        "Silent type, huh? You might survive here after all.",
+        "bold yellow"
+    )
 
 # Combat example
 show_message("A gladiator challenges you!", "Prepare for battle!", "bold red")

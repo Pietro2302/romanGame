@@ -13,11 +13,10 @@ class Title:
     def get_description(self):
         return self.description
 
+
 class Titles:
     def __init__(self):
         self.titles = {}  # { Title.SENATOR: {"influence": +10, "gold": +100}, ... }
 
     def to_dict(self):
         return {title.name: effects for title, effects in self.titles.items()}
-
-
