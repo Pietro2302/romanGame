@@ -32,6 +32,7 @@ class TestGameFunctions(unittest.TestCase):
     @patch('common_functions.load_characters')
     @patch('styles.narrator_print')
     @patch('questionary.select')
+    @patch('os.system')
     def test_display_save_games_no_saves(self, mock_select, mock_narrator, mock_load):
         mock_load.return_value = []  # No saved characters
 
