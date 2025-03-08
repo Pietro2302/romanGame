@@ -16,7 +16,7 @@ ancient_latin_words = [
     "Aeneas", "Julius", "Caesar", "Augustus", "Claudii", "Tiberius",
     "Caligula", "Flavians", "Vespasian", "Titus", "Vesuvius",
     "Colosseum", "Dī bene vertant", "Scipius", "Julian", "Claudius",
-    "Flavius"
+    "Flavius", "Valē"
 ]
 
 

@@ -16,7 +16,7 @@ class Title:
 
 class Titles:
     def __init__(self):
-        self.titles = {}  # { Title.SENATOR: {"influence": +10, "gold": +100}, ... }
+        self.titles = {}
 
     def to_dict(self):
         return {title.name: effects for title, effects in self.titles.items()}

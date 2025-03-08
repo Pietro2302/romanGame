@@ -40,18 +40,23 @@ def new_Game(console):
         family_choice ="no_family"
     match family_choice:
         case "The Scipius family":
+            os.system('cls')
             narrator_print(f"Welcome to Rome, {first_name} Scipio, may you become a fine warrior and a mighty general!", console)
             family_name = "Scipio"   
         case "The Julian family":
+            os.system('cls')
             narrator_print(f"Welcome to Rome, Julius {first_name}, may you climb the political ladder in an heartbeat!", console)
             family_name = "Julius"
         case "The Claudius family":
+            os.system('cls')
             narrator_print(f"Welcome to Rome, {first_name} Claudius, may your power over the Imperium be unyelding!", console) 
             family_name = "Claudius"
         case "The Flavius family":
+            os.system('cls')
             narrator_print(f"Welcome to Rome, Flavius {first_name}, may your buildings reach for the sky!", console)
             family_name = "Flavius"
         case "no_family":
+            os.system('cls')
             narrator_print(f"Welcome to Rome,bold one. Please, {first_name}, choose a family name for yourself, one that will echoe through the Empirium forever!", console)
             family_name = input(">   ")
     player_character = Character(first_name,family_name,gender)
