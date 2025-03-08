@@ -5,6 +5,8 @@ from inventory_class import Inventory
 from quest_class import QuestSystem
 from reputation_class import Reputation
 from title_class import Titles
+
+
 class Character:
     def __init__(self, first_name, family_name, gender):
         self.id = str(uuid.uuid4())
@@ -13,7 +15,10 @@ class Character:
         self.gender = gender
         self.level = 0
         self.xp = 0
-        self.attributes = {"strength": 10, "dexterity": 10, "constitution": 10, "intelligence": 10, "wisdom": 10, "charisma": 10 }
+        self.attributes = {
+            "strength": 10, "dexterity": 10, "constitution": 10,
+            "intelligence": 10, "wisdom": 10, "charisma": 10
+        }
 
         self.skills = Skills()
         self.relationships = Relationships()
@@ -32,6 +37,7 @@ class Character:
                 f"Skills: {str(self.skills)} | Relationships: {str(self.relationships)}\n"
                 f"Inventory: {str(self.inventory)} | Quests: {str(self.quests)} | "
                 f"Reputation: {str(self.reputation)} | Titles: {str(self.titles)}")
+
     def to_dict(self):
         # Convert character to a dictionary representation
         return {
@@ -49,3 +55,4 @@ class Character:
             'reputation': self.reputation.to_dict(),  # Assuming Reputation class has a to_dict method
             'titles': self.titles.to_dict()  # Assuming Titles class has a to_dict method
         }
+
