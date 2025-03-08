@@ -1,8 +1,8 @@
 class Title:
     def __init__(self, name, effects=None, description=None):
         self.name = name
-        self.effects = effects if effects is not None else {}
-        self.description = description if description else "No description provided."
+        self.effects = effects
+        self.description = description
 
     def __str__(self):
         return self.name
