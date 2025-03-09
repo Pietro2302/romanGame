@@ -152,7 +152,7 @@ def displaySaveGames(console):
             char["id"],
             f"{char['first_name']} {char['family_name']}"
         )
-        for char in characters_dict 
+        for char in characters_dict
         if "first_name" in char and "family_name" in char
     ]
     loading_choice = questionary.select(
