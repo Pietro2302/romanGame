@@ -159,9 +159,15 @@ def displaySaveGames(console):
         " ", choices=[name for _, name in character_choices]
     ).ask()
     os.system('cls')
-    selected_id = next(id for id, name in character_choices if name == loading_choice)
-    char_choice = next(char for char in characters_dict if char["id"] == selected_id)
+    selected_id = next(
+        id for id, name in character_choices if name == loading_choice
+    )
+    char_choice = next(
+        char for char in characters_dict if char["id"] == selected_id
+    )
     char_table = Table(box=box.DOUBLE_EDGE)
-    char_table.add_column(f"{char_choice['first_name']} {char_choice['family_name']} "
-                          f"Level: {char_choice['level']}")
+    char_table.add_column(
+        f"{char_choice['first_name']} {char_choice['family_name']} "
+        f"Level: {char_choice['level']}"
+    )
     console.print(char_table)
