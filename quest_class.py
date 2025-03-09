@@ -15,6 +15,7 @@ class Quest:
             "status": self.status
         }
 
+
 class QuestSystem:
     def __init__(self):
         self.active_quests = []
@@ -24,4 +25,4 @@ class QuestSystem:
         return {
             "active_quests": self.active_quests,
             "completed_quests": self.completed_quests
-        }    
+        }
