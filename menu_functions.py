@@ -9,6 +9,7 @@ import os
 
 characters_filename = "character_player.json"
 
+
 def new_Game(console):
     os.system('cls')
     narrator_print(
@@ -69,7 +70,7 @@ def new_Game(console):
     input("Press Enter to continue...")
     os.system('cls')
     narrator_print(
-        "Finally, the Flavians, the Builders of Legacy. Rising from civil war, "
+        "Finally, the Flavians, the Builders of Legacy. Rising from civil war,"
         "the Flavians restored the empire under Vespasian, bringing peace "
         "and stability. Titus, his son, faced the eruption of Vesuvius and "
         "constructed the mighty Colosseum, a symbol of Rome’s enduring "
@@ -94,10 +95,10 @@ def new_Game(console):
             "I belong to no family. (Warning: highest difficulty)"
         ]
     ).ask()
-    
+
     if "no family" in family_choice:
         family_choice = "no_family"
-    
+
     os.system('cls')
     match family_choice:
         case "The Scipius family":
@@ -125,21 +126,25 @@ def new_Game(console):
             )
             family_name = input("> ")
     narrator_print(message, console)
-    
+
     player_character = Character(first_name, family_name, gender)
     characters_dict = load_characters(characters_filename)
     characters_dict.append(player_character.to_dict())
     save_characters(characters_filename, characters_dict)
 
+
 def load_Game():
     time.sleep(1)
+
 
 def displaySaveGames(console):
     characters_dict = load_characters(characters_filename)
     if not characters_dict:
         narrator_print(
-            "It seems like you haven't yet saved any Romans. "
-            "Go back to the menu and start a new game!",
+            "It seems like you haven't "
+            "yet saved any Romans."
+            "Go back to the menu "
+            "and start a new game!",
             console,
         )
         return
