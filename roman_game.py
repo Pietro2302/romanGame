@@ -31,14 +31,14 @@ match menu_choice:
     case "Load Game":
         os.system('cls')
         narrator_print(
-            "Choose one of the characters you have previously saved:", 
+            "Choose one of the characters you have previously saved:",
             console,
         )
         displaySaveGames(console)
     case "Exit":
         os.system('cls')
         narrator_print(
-            "Thank you for keeping company to an old man. Valē!", 
+            "Thank you for keeping company to an old man. Valē!",
             console,
         )
         os._exit(0)

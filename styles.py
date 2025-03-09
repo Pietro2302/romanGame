@@ -24,7 +24,6 @@ def narrator_print(text, console):
     text_object = Text(text, style=narrator_style)
     text_object.highlight_regex(r'\b[A-Z]+\b', style=all_caps_style)
     for word in ancient_latin_words:
-        # Highlight each Ancient Latin word found in the text with the ancient_latin_style
         pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
         text_object.highlight_regex(pattern, style=ancient_latin_style)
     console.print(Panel(
