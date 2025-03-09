@@ -1,5 +1,4 @@
 from styles import narrator_print
-from rich.console import Console   
 from rich import box
 from rich.table import Table
 from character_class import Character
@@ -9,6 +8,8 @@ import questionary
 import os
 characters_filename = "character_player.json"
 def new_Game(console):
+
+
     os.system('cls')
     narrator_print("Firstly, you must choose your character's first name. What is your name, Roman?",console)
     first_name = input(">   ")

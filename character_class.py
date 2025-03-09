@@ -43,6 +43,6 @@ class Character:
             'reputation': self.reputation.to_dict(),
             'titles': self.titles.to_dict()
         }
-    
+
     def __str__(self):
         return str(self.to_dict())
