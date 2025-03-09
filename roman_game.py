@@ -22,7 +22,10 @@ menu_choice = questionary.select(
 match menu_choice:
     case "New Game":
         os.system('cls')
-        narrator_print("You chose to start a new game. Good luck, Roman!", console)
+        narrator_print(
+            "You chose to start a new game. Good luck, Roman!", 
+            console,
+        )
         time.sleep(2.5)
         new_Game(console)
     case "Load Game":
