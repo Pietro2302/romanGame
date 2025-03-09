@@ -3,4 +3,4 @@ class Skills:
         self.skills = {}
 
     def to_dict(self):
-        return self.skills    
+        return self.skills
