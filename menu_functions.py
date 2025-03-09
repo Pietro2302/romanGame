@@ -6,51 +6,53 @@ from common_functions import load_characters, save_characters
 import time
 import questionary
 import os
+
 characters_filename = "character_player.json"
+
 def new_Game(console):
-
-
     os.system('cls')
-    narrator_print("Firstly, you must choose your character's first name. What is your name, Roman?",console)
-    first_name = input(">   ")
+    narrator_print("Firstly, you must choose your character's first name. What is your name, Roman?", console)
+    first_name = input("> ")
     os.system('cls')
     narrator_print("What is your gender?", console)
-    gender = input(">   ")
+    gender = input("> ")
     os.system('cls')
     narrator_print(f"Ah, {first_name}! Such a wonderful name, indeed. In ancient Rome, family names held great significance. They represented not just lineage, but honor, legacy, and the deeds of those who bore them. A Roman name carried the weight of one’s ancestors, shaping one's identity and place in society. Allow me, then, to speak of these legendary families, whose names echo through the annals of our history, their deeds immortalized in the very fabric of Rome itself.", console)
     input("Press Enter to continue...")
     os.system('cls')
-    narrator_print("First, let us speak of the Scipii,the Masters of Warfare. Born of noble blood and forged in battle, the Scipii are a family destined for greatness. Under Publius Cornelius Scipio Africanus, they shattered Hannibal and secured Rome’s supremacy. Known for brilliant strategy and unstoppable armies, their legacy is written in the blood of their foes and built on the ruins of those who dared oppose Rome.",console)
+    narrator_print("First, let us speak of the Scipii, the Masters of Warfare. Born of noble blood and forged in battle, the Scipii are a family destined for greatness. Under Publius Cornelius Scipio Africanus, they shattered Hannibal and secured Rome’s supremacy. Known for brilliant strategy and unstoppable armies, their legacy is written in the blood of their foes and built on the ruins of those who dared oppose Rome.", console)
     input("Press Enter to continue...")
     os.system('cls')
-    narrator_print("Next, we have the Julians,the Political Titans. Descendants of Aeneas and blessed with a divine lineage, the Julians mastered diplomacy and imperial ambition. Julius Caesar, conqueror and revolutionary, sought not just power in the Senate, but dominion over the world. Under Augustus, they ushered in the era of empire, with a peace forged by their iron will. Their grip on Rome is absolute, shaping the empire from behind the shadows.",console)
+    narrator_print("Next, we have the Julians, the Political Titans. Descendants of Aeneas and blessed with a divine lineage, the Julians mastered diplomacy and imperial ambition. Julius Caesar, conqueror and revolutionary, sought not just power in the Senate, but dominion over the world. Under Augustus, they ushered in the era of empire, with a peace forged by their iron will. Their grip on Rome is absolute, shaping the empire from behind the shadows.", console)
     input("Press Enter to continue...")
     os.system('cls')
-    narrator_print("Then there are the Claudii,the Imperial Dynasty. Born to rule with fierce authority, the Claudii are defined by their unyielding control. With Tiberius, the empire was held in cold, calculated power. Caligula, unpredictable and tyrannical, sought to reshape the world at his whim. Yet, even in turmoil, the Claudii expanded and transformed Rome, bending the empire to their will.", console)
+    narrator_print("Then there are the Claudii, the Imperial Dynasty. Born to rule with fierce authority, the Claudii are defined by their unyielding control. With Tiberius, the empire was held in cold, calculated power. Caligula, unpredictable and tyrannical, sought to reshape the world at his whim. Yet, even in turmoil, the Claudii expanded and transformed Rome, bending the empire to their will.", console)
     input("Press Enter to continue...")
     os.system('cls')
-    narrator_print("Finally, the Flavians,the Builders of Legacy. Rising from civil war, the Flavians restored the empire under Vespasian, bringing peace and stability. Titus, his son, faced the eruption of Vesuvius and constructed the mighty Colosseum, a symbol of Rome’s enduring strength. The Flavians are builders, not conquerors—shaping Rome’s future with monumental projects and lasting foundations.", console)
+    narrator_print("Finally, the Flavians, the Builders of Legacy. Rising from civil war, the Flavians restored the empire under Vespasian, bringing peace and stability. Titus, his son, faced the eruption of Vesuvius and constructed the mighty Colosseum, a symbol of Rome’s enduring strength. The Flavians are builders, not conquerors—shaping Rome’s future with monumental projects and lasting foundations.", console)
     input("Press Enter to continue...")
     os.system('cls')
-    narrator_print("So, fili mii, to what family do you belong to? Be careful, since this will shape your future and your destiny. Dī bene vertant!",console)
+    narrator_print("So, fili mii, to what family do you belong to? Be careful, since this will shape your future and your destiny. Dī bene vertant!", console)
     family_choice = questionary.select(
         "",
-        choices=["The Scipius family", "The Julian family","The Claudius family", "The Flavius family", "I belong to no family.(Warning, this sets the game on the highest difficulty. Only for veteran players.)"]
-    ).ask()    
+        choices=["The Scipius family", "The Julian family", "The Claudius family", "The Flavius family", "I belong to no family.(Warning, this sets the game on the highest difficulty. Only for veteran players.)"]
+    ).ask()
+    
     if family_choice == "I belong to no family.(Warning, this sets the game on the highest difficulty. Only for veteran players.)":
-        family_choice ="no_family"
+        family_choice = "no_family"
+    
     match family_choice:
         case "The Scipius family":
             os.system('cls')
             narrator_print(f"Welcome to Rome, {first_name} Scipio, may you become a fine warrior and a mighty general!", console)
-            family_name = "Scipio"   
+            family_name = "Scipio"
         case "The Julian family":
             os.system('cls')
             narrator_print(f"Welcome to Rome, Julius {first_name}, may you climb the political ladder in an heartbeat!", console)
             family_name = "Julius"
         case "The Claudius family":
             os.system('cls')
-            narrator_print(f"Welcome to Rome, {first_name} Claudius, may your power over the Imperium be unyelding!", console) 
+            narrator_print(f"Welcome to Rome, {first_name} Claudius, may your power over the Imperium be unyelding!", console)
             family_name = "Claudius"
         case "The Flavius family":
             os.system('cls')
@@ -58,10 +60,12 @@ def new_Game(console):
             family_name = "Flavius"
         case "no_family":
             os.system('cls')
-            narrator_print(f"Welcome to Rome,bold one. Please, {first_name}, choose a family name for yourself, one that will echoe through the Empirium forever!", console)
-            family_name = input(">   ")
-    player_character = Character(first_name,family_name,gender)
+            narrator_print(f"Welcome to Rome, bold one. Please, {first_name}, choose a family name for yourself, one that will echoe through the Empirium forever!", console)
+            family_name = input("> ")
+    
+    player_character = Character(first_name, family_name, gender)
     newcharacter_dict = player_character.to_dict()
+    
     # Save the dictionary to a JSON file
     characters_dict = load_characters(characters_filename)
     characters_dict.append(newcharacter_dict)
@@ -70,28 +74,28 @@ def new_Game(console):
 def load_Game():
     time.sleep(1)
 
-
 def displaySaveGames(console):
-        characters_dict = load_characters(characters_filename)
-        if(len(characters_dict)== 0):
-            narrator_print("It seems like you haven't yet saved any Romans. Go back to the menu and start a new game!", console)
-            return
-        character_choices = [
+    characters_dict = load_characters(characters_filename)
+    if len(characters_dict) == 0:
+        narrator_print("It seems like you haven't yet saved any Romans. Go back to the menu and start a new game!", console)
+        return
+    
+    character_choices = [
         (char['id'], f"{char['first_name']} {char['family_name']}") 
-        for char in characters_dict if 'first_name' in char and 'family_name' in char]
-        loading_choice = questionary.select(
-            " ",
-            choices=[name for _, name in character_choices]
-        ).ask()
-        os.system('cls')
-        selected_id = next(id for id, name in character_choices if name == loading_choice)
-        char_choice = next(char for char in characters_dict if char["id"] == selected_id)
-        char_table = Table(box=box.DOUBLE_EDGE)
-        char_table.add_column(
-            f"{char_choice.get('first_name')} {char_choice.get('family_name')}  Level: {char_choice.get('level')}"
-        )
-        console.print(char_table)
-                
-            
-        
-
+        for char in characters_dict if 'first_name' in char and 'family_name' in char
+    ]
+    
+    loading_choice = questionary.select(
+        " ",
+        choices=[name for _, name in character_choices]
+    ).ask()
+    
+    os.system('cls')
+    selected_id = next(id for id, name in character_choices if name == loading_choice)
+    char_choice = next(char for char in characters_dict if char["id"] == selected_id)
+    
+    char_table = Table(box=box.DOUBLE_EDGE)
+    char_table.add_column(
+        f"{char_choice.get('first_name')} {char_choice.get('family_name')}  Level: {char_choice.get('level')}"
+    )
+    console.print(char_table)
