@@ -149,7 +149,7 @@ def displaySaveGames(console):
         return
     character_choices = [
         (
-            char["id"], 
+            char["id"],
             f"{char['first_name']} {char['family_name']}"
         )
         for char in characters_dict 
