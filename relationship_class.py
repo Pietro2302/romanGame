@@ -7,22 +7,30 @@ class RelationshipType(Enum):
     HOSTILITY = "Hostility"
     ADMIRATION = "Admiration"
     FEAR = "Fear"
- 
+
     def __str__(self):
         return self.value
 
 
 class Relationship:
-    def __init__(self, nameFirstPerson: str, nameSecondPerson:str, relationship_type: RelationshipType, value: int = 0):
+    def __init__(
+        self,
+        nameFirstPerson: str,
+        nameSecondPerson: str,
+        relationship_type: RelationshipType,
+        value: int = 0,
+    ):
         self.firstPerson = nameFirstPerson
         self.secondPerson = nameSecondPerson
         self.relationship_type = relationship_type
         self.value = value
 
     def __str__(self):
-        return f"{self.firstPerson} {self.relationship_type} ({self.value}) {self.secondPerson}"
-
-
+        return (
+            f"{self.firstPerson} {self.relationship_type} "
+            f"({self.value}) {self.secondPerson}"
+        )
+    
 
 class Relationships:
     def __init__(self):
