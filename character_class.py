@@ -27,20 +27,7 @@ class Character:
         self.reputation = Reputation()
         self.titles = Titles()
 
-    def __str__(self):
-        # String representation of the character
-        return (f"ID: {self.id} | Character: {self.first_name} {self.family_name}, "
-                f"Gender: {self.gender}, Level: {self.level} | XP: {self.xp}\n"
-                f"Attributes - STR: {self.attributes['strength']}, "
-                f"DEX: {self.attributes['dexterity']}, CON: {self.attributes['constitution']}, "
-                f"INT: {self.attributes['intelligence']}, WIS: {self.attributes['wisdom']}, "
-                f"CHA: {self.attributes['charisma']}\n"
-                f"Skills: {str(self.skills)} | Relationships: {str(self.relationships)}\n"
-                f"Inventory: {str(self.inventory)} | Quests: {str(self.quests)} | "
-                f"Reputation: {str(self.reputation)} | Titles: {str(self.titles)}")
-
     def to_dict(self):
-        # Convert character to a dictionary representation
         return {
             'id': self.id,
             'first_name': self.first_name,
@@ -49,10 +36,13 @@ class Character:
             'level': self.level,
             'xp': self.xp,
             'attributes': self.attributes,
-            'skills': self.skills.to_dict(),  # Assuming Skills class has a to_dict method
-            'relationships': self.relationships.to_dict(),  # Assuming Relationships class has a to_dict method
-            'inventory': self.inventory.to_dict(),  # Assuming Inventory class has a to_dict method
-            'quests': self.quests.to_dict(),  # Assuming QuestSystem class has a to_dict method
-            'reputation': self.reputation.to_dict(),  # Assuming Reputation class has a to_dict method
-            'titles': self.titles.to_dict()  # Assuming Titles class has a to_dict method
+            'skills': self.skills.to_dict(),
+            'relationships': self.relationships.to_dict(),
+            'inventory': self.inventory.to_dict(),
+            'quests': self.quests.to_dict(),
+            'reputation': self.reputation.to_dict(),
+            'titles': self.titles.to_dict()
         }
+    
+    def __str__(self):
+        return str(self.to_dict())
