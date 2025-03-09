@@ -23,16 +23,22 @@ match menu_choice:
     case "New Game":
         os.system('cls')
         narrator_print(
-            "You chose to start a new game. Good luck, Roman!", 
+            "You chose to start a new game. Good luck, Roman!",
             console,
         )
         time.sleep(2.5)
         new_Game(console)
     case "Load Game":
         os.system('cls')
-        narrator_print("Choose one of the characters you have previously saved:", console)
+        narrator_print(
+            "Choose one of the characters you have previously saved:", 
+            console,
+        )
         displaySaveGames(console)
     case "Exit":
         os.system('cls')
-        narrator_print("Thank you for keeping company to an old man. Valē!", console)
+        narrator_print(
+            "Thank you for keeping company to an old man. Valē!", 
+            console,
+        )
         os._exit(0)
