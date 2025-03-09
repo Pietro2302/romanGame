@@ -1,17 +1,19 @@
 from enum import Enum
 
+
 class RelationshipType(Enum):
     FRIENDSHIP = "Friendship"
     RIVALRY = "Rivalry"
     HOSTILITY = "Hostility"
     ADMIRATION = "Admiration"
     FEAR = "Fear"
-    
+ 
     def __str__(self):
         return self.value
 
+
 class Relationship:
-    def __init__(self, nameFirstPerson: str,nameSecondPerson:str, relationship_type: RelationshipType, value: int = 0):
+    def __init__(self, nameFirstPerson: str, nameSecondPerson:str, relationship_type: RelationshipType, value: int = 0):
         self.firstPerson = nameFirstPerson
         self.secondPerson = nameSecondPerson
         self.relationship_type = relationship_type
