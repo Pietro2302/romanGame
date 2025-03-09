@@ -1,11 +1,11 @@
 class Quest:
     def __init__(self, name, description, objectives, reward):
-        self.name = name  
-        self.description = description  
-        self.objectives = objectives  
-        self.reward = reward  
-        self.status = "active" 
-    
+        self.name = name
+        self.description = description
+        self.objectives = objectives
+        self.reward = reward
+        self.status = "active"
+
     def to_dict(self):
         return {
             "name": self.name,
