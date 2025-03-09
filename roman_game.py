@@ -6,7 +6,14 @@ import os
 import time
 console = Console()
 characters_filename = "character_player.json"
-narrator_print("Hello and welcome to the Roman Imperium,fili mi! My name is Publius Vergilius Maro, and I will be your guide through this difficult world of mine. Firstly, choose what to do.", console)
+narrator_print(
+    (
+        "Hello and welcome to the Roman Imperium, fili mi! My name is "
+        "Publius Vergilius Maro, and I will be your guide through this "
+        "difficult world of mine. Firstly, choose what to do."
+    ),
+    console,
+)
 menu_choice = questionary.select(
     "Menu",
     choices=["New Game", "Load Game", "Options", "Exit"]
