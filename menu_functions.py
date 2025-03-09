@@ -148,9 +148,12 @@ def displaySaveGames(console):
             console,)
         return
     character_choices = [
-        (char['id'], f"{char['first_name']} {char['family_name']}")
-        for char in characters_dict:
-            if 'first_name' in char and 'family_name' in char
+        (
+            char["id"], 
+            f"{char['first_name']} {char['family_name']}"
+        )
+        for char in characters_dict 
+        if "first_name" in char and "family_name" in char
     ]
     loading_choice = questionary.select(
         " ", choices=[name for _, name in character_choices]
