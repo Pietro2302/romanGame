@@ -42,4 +42,3 @@ class Relationships:
             "npc_relations": self.npc_relations,
             "factions_relations": self.factions_relations
         }
-
