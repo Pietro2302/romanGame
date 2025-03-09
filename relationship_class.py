@@ -30,7 +30,7 @@ class Relationship:
             f"{self.firstPerson} {self.relationship_type} "
             f"({self.value}) {self.secondPerson}"
         )
-    
+
 
 class Relationships:
     def __init__(self):
@@ -41,5 +41,5 @@ class Relationships:
         return {
             "npc_relations": self.npc_relations,
             "factions_relations": self.factions_relations
-        }    
-    
+        }
+
