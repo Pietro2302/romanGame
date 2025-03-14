@@ -1,5 +1,5 @@
 import uuid
-from skills_class import Skills
+from skills_class import SkillsManager
 from relationship_class import Relationships
 from inventory_class import Inventory
 from quest_class import QuestSystem
@@ -20,7 +20,7 @@ class Character:
             "intelligence": 10, "wisdom": 10, "charisma": 10
         }
 
-        self.skills = Skills()
+        self.skills = SkillsManager()
         self.relationships = Relationships()
         self.inventory = Inventory()
         self.quests = QuestSystem()
