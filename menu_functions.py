@@ -104,23 +104,27 @@ def new_Game(console):
         case "The Scipius family":
             family_name = "Scipio"
             message = (
-            f"Welcome to Rome, {first_name} {family_name}, "
-            "may you become a fine warrior and a mighty general!")
+                f"Welcome to Rome, {first_name} {family_name}, "
+                "may you become a fine warrior and a mighty general!"
+            )
         case "The Julian family":
             family_name = "Julius"
             message = (
-            "Welcome to Rome, Julius {first_name}, "
-            "may you climb the political ladder in a heartbeat!")
+                f"Welcome to Rome, Julius {first_name}, "
+                "may you climb the political ladder in a heartbeat!"
+            )
         case "The Claudius family":
             family_name = "Claudius"
             message = (
-            f"Welcome to Rome, {first_name} {family_name}, "
-            "may your power over the Imperium be unyielding!")
+                f"Welcome to Rome, {first_name} {family_name}, "
+                "may your power over the Imperium be unyielding!"
+            )
         case "The Flavius family":
             family_name = "Flavius"
             message = (
-            f"Welcome to Rome, Flavius {first_name}, "
-            "may your buildings reach for the sky!")
+                f"Welcome to Rome, Flavius {first_name}, "
+                "may your buildings reach for the sky!"
+            )
         case "no_family":
             narrator_print(
                 "Welcome to Rome, bold one. Please, choose a family name "

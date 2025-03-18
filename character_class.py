@@ -3,7 +3,12 @@ from managers.character_manager import CharacterManager
 
 
 class Character:
-    def __init__(self, first_name, family_name, gender, level = 0, xp = 0, attributes=None, skills = None, relationships = None, inventory = None, quests = None, reputation = None, titles = None):
+    def __init__(self, 
+                first_name, family_name, gender,
+                level=0, xp=0, attributes=None,
+                skills=None, relationships=None,
+                inventory=None, quests=None, reputation=None,
+                titles=None):
         self.id = str(uuid.uuid4())
         self.first_name = first_name
         self.family_name = family_name
