@@ -8,7 +8,7 @@ class Character:
                 level=0, xp=0, attributes=None,
                 skills=None, relationships=None,
                 inventory=None, quests=None, reputation=None,
-                titles=None):
+                    titles=None):
         self.id = str(uuid.uuid4())
         self.first_name = first_name
         self.family_name = family_name

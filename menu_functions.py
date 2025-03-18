@@ -162,7 +162,7 @@ def displaySaveGames(console):
     loading_choice = questionary.select(
         " ", choices=[name for _, name in character_choices]
     ).ask()
-    os.system('cls')
+    os.system('cls')        
     selected_id = next(
         id for id, name in character_choices if name == loading_choice
     )
@@ -181,6 +181,11 @@ def displaySaveGames(console):
     if (toload == "Yes"):
         load_Game(char_choice)
     else:
+        os.system('cls')
+        narrator_print(
+            "Choose one of the characters you have previously saved:",
+            console,
+        )
         displaySaveGames(console)
 
 
