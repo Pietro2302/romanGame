@@ -170,13 +170,16 @@ def displaySaveGames(console):
     narrator_print("Do you wish to load this character ?", console)
     toload = questionary.select(
         "", choices=["Yes", "No"]).ask()
-    if(toload == "Yes"):
+    if (toload == "Yes"):
         load_Game(char_choice)
     else:
         displaySaveGames(console)
 
 
 def load_Game(character):
-    player_char = Character(character['first_name'],character['family_name'],character['gender'])
+    player_char = Character(
+        character['first_name'], 
+        character['family_name'], 
+        character['gender'])
     print(player_char)
     time.sleep(1)
