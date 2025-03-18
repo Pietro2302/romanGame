@@ -47,4 +47,8 @@ class GameResult:
         self.data = data  # Può contenere informazioni extra utili
 
     def __repr__(self):
-        return f"GameResult(success={self.success}, message='{self.message}', data={self.data})"
+        return (
+            f"GameResult(success={self.success},"
+            f"message='{self.message},"
+            f"data={self.data})"
+        )
