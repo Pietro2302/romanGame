@@ -179,5 +179,6 @@ def displaySaveGames(console):
 
 
 def load_Game(character):
-    print(character)
+    player_char = Character(character['first_name'],character['family_name'],character['gender'])
+    print(player_char)
     time.sleep(1)

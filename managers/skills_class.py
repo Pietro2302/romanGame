@@ -1,7 +1,8 @@
+import json
 class Skill:
-    def __init__(self, name, skill_type, effects, is_active=True,
-                 combat_only=False, cooldown=0, stamina_cost=0,
-                 requirements=None):
+    def __init__(self, name, skill_type, effects, is_active,
+                 combat_only, cooldown, stamina_cost,
+                 requirements):
         self.name = name
         self.skill_type = skill_type
         self.is_active = is_active
@@ -20,9 +21,16 @@ class Skill:
 
 
 class SkillsManager:
-    def __init__(self):
+    def __init__(self, skills_file = "managers/skills.json"):
         self.skills = {}
+        self.load_skills(skills_file)
         self.cooldowns = {}
 
-    def load_skills(self, character):
-        self.skills = character.skills
+    def load_skills(self, filename):
+        with open(filename, "r") as file:
+            skills_data = json.load(file)
+            for skill_data in skills_data:
+                skill = Skill(**skill_data)
+                self.skills[skill.name] = skill
+
+        
