@@ -133,8 +133,6 @@ def new_Game(console):
     save_characters(characters_filename, characters_dict)
 
 
-def load_Game():
-    time.sleep(1)
 
 
 def displaySaveGames(console):
@@ -171,3 +169,15 @@ def displaySaveGames(console):
         f"Level: {char_choice['level']}"
     )
     console.print(char_table)
+    narrator_print("Do you wish to load this character ?", console)
+    toload = questionary.select(
+        "", choices=["Yes","No"]    ).ask()
+    if(toload == "Yes"):
+        load_Game(char_choice)
+    else:
+        displaySaveGames(console)
+
+
+def load_Game(character):
+    print(character)
+    time.sleep(1)
