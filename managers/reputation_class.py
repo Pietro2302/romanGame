@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ReputationType(Enum):
     HONORABLE = "Honorable"
     FEARED = "Feared"
@@ -14,11 +15,13 @@ class ReputationType(Enum):
     CUNNING = "Cunning"
     TYRANNICAL = "Tyrannical"
 
+
 class Reputation:
     def __init__(self, reputation_type, reputation_value=0, history=None):
-        self.reputation_type = reputation_type  # Reputation type (e.g. 'Honorable', 'Feared', etc.)
-        self.reputation_value = reputation_value  # Numeric value of the reputation, could be a score or tier.
+        self.reputation_type = reputation_type
+        self.reputation_value = reputation_value
         self.history = history if history else []
+
 
 class ReputationsManager:
     def __init__(self):

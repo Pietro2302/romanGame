@@ -14,4 +14,3 @@ class CharacterManager:
         self.reputationManager = ReputationsManager()
         self.skillManager = SkillsManager()
         self.titleManager = TitlesManager()
-        
