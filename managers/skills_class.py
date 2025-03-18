@@ -1,6 +1,6 @@
 class Skill:
-    def __init__(self, name, skill_type, effects, is_active=True, 
-                 combat_only=False, cooldown=0, stamina_cost=0, 
+    def __init__(self, name, skill_type, effects, is_active=True,
+                 combat_only=False, cooldown=0, stamina_cost=0,
                  requirements=None):
         self.name = name
         self.skill_type = skill_type
@@ -23,7 +23,6 @@ class SkillsManager:
     def __init__(self):
         self.skills = {}
         self.cooldowns = {}
-
 
     def load_skills(self, character):
         self.skills = character.skills
