@@ -5,6 +5,7 @@ from reputation_class import ReputationsManager
 from skills_class import SkillsManager
 from title_class import TitlesManager
 
+
 class CharacterManager:
     def __init__(self):
         self.inventoryManager = InventoryManager()
