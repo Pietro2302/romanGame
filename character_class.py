@@ -1,6 +1,7 @@
 import uuid
 from managers.character_manager import CharacterManager
 
+
 class Character:
     def __init__(self, first_name, family_name, gender):
         self.id = str(uuid.uuid4())
