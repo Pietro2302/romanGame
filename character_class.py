@@ -1,5 +1,6 @@
 import uuid
 
+
 class Character:
     def __init__(self, first_name, family_name, gender):
         self.id = str(uuid.uuid4())
@@ -18,7 +19,6 @@ class Character:
         self.quests = {}
         self.reputation = {}
         self.titles = {}
-
 
     def to_dict(self):
         return {
