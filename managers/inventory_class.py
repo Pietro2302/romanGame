@@ -8,6 +8,6 @@ class Item:
     def __str__(self):
         return f"{self.name} ({self.item_type}): {self.description}"
 
-class inventoryManager:
+class InventoryManager:
     def __init__(self):
         self.items = {}
