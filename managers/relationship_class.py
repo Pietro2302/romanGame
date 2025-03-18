@@ -32,7 +32,7 @@ class Relationship:
         )
 
 
-class Relationships:
+class RelationshipsManager:
     def __init__(self):
         self.npc_relations = {}
         self.factions_relations = {}

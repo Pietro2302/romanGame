@@ -1,11 +1,4 @@
 import uuid
-from skills_class import SkillsManager
-from relationship_class import Relationships
-from inventory_class import Inventory
-from quest_class import QuestSystem
-from reputation_class import Reputation
-from title_class import Titles
-
 
 class Character:
     def __init__(self, first_name, family_name, gender):
@@ -19,13 +12,13 @@ class Character:
             "strength": 10, "dexterity": 10, "constitution": 10,
             "intelligence": 10, "wisdom": 10, "charisma": 10
         }
+        self.skills = {}
+        self.relationships = {}
+        self.inventory = {}
+        self.quests = {}
+        self.reputation = {}
+        self.titles = {}
 
-        self.skills = SkillsManager()
-        self.relationships = Relationships()
-        self.inventory = Inventory()
-        self.quests = QuestSystem()
-        self.reputation = Reputation()
-        self.titles = Titles()
 
     def to_dict(self):
         return {
@@ -36,12 +29,12 @@ class Character:
             'level': self.level,
             'xp': self.xp,
             'attributes': self.attributes,
-            'skills': self.skills.to_dict(),
-            'relationships': self.relationships.to_dict(),
-            'inventory': self.inventory.to_dict(),
-            'quests': self.quests.to_dict(),
-            'reputation': self.reputation.to_dict(),
-            'titles': self.titles.to_dict()
+            'skills': self.skills,
+            'relationships': self.relationships,
+            'inventory': self.inventory,
+            'quests': self.quests,
+            'reputation': self.reputation,
+            'titles': self.titles
         }
 
     def __str__(self):

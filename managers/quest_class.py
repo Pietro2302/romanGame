@@ -16,7 +16,7 @@ class Quest:
         }
 
 
-class QuestSystem:
+class QuestManager:
     def __init__(self):
         self.active_quests = []
         self.completed_quests = []

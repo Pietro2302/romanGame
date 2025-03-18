@@ -14,7 +14,7 @@ class Title:
         return self.description
 
 
-class Titles:
+class TitlesManager:
     def __init__(self):
         self.titles = {}
 
