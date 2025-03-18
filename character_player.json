@@ -32,5 +32,93 @@
             "feared": 0
         },
         "titles": {}
+    },
+    {
+        "id": "43436ae0-f530-479c-8510-9c4c8c659a58",
+        "first_name": "Eugenios",
+        "family_name": "Scipio",
+        "gender": "Male",
+        "level": 0,
+        "xp": 0,
+        "attributes": {
+            "strength": 15,
+            "dexterity": 16,
+            "constitution": 18,
+            "intelligence": 19,
+            "wisdom": 20,
+            "charisma": 0
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    {
+        "id": "1612de76-9d8a-4acb-b0b2-cedf3d547bac",
+        "first_name": "",
+        "family_name": "Scipio",
+        "gender": "SDAK",
+        "level": 0,
+        "xp": 0,
+        "attributes": {
+            "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    {
+        "id": "3ddb248d-f765-4643-af5e-af66ad481518",
+        "first_name": "Lucius",
+        "family_name": "Flavius",
+        "gender": "Male",
+        "level": 0,
+        "xp": 0,
+        "attributes": {
+            "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    {
+        "id": "1a103e56-3d7f-4e56-bf59-ca61456fc6b3",
+        "first_name": "Mahsahaha",
+        "family_name": "Scipio",
+        "gender": "shad",
+        "level": 0,
+        "xp": 0,
+        "attributes": {
+            "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
     }
 ]

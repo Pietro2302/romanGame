@@ -103,20 +103,24 @@ def new_Game(console):
     match family_choice:
         case "The Scipius family":
             family_name = "Scipio"
-            message = f"Welcome to Rome, {first_name} {family_name}, "
-            "may you become a fine warrior and a mighty general!"
+            message = (
+            f"Welcome to Rome, {first_name} {family_name}, "
+            "may you become a fine warrior and a mighty general!")
         case "The Julian family":
             family_name = "Julius"
-            message = f"Welcome to Rome, Julius {first_name}, "
-            "may you climb the political ladder in a heartbeat!"
+            message = (
+            "Welcome to Rome, Julius {first_name}, "
+            "may you climb the political ladder in a heartbeat!")
         case "The Claudius family":
             family_name = "Claudius"
-            message = f"Welcome to Rome, {first_name} {family_name}, "
-            "may your power over the Imperium be unyielding!"
+            message = (
+            f"Welcome to Rome, {first_name} {family_name}, "
+            "may your power over the Imperium be unyielding!")
         case "The Flavius family":
             family_name = "Flavius"
-            message = f"Welcome to Rome, Flavius {first_name}, "
-            "may your buildings reach for the sky!"
+            message = (
+            f"Welcome to Rome, Flavius {first_name}, "
+            "may your buildings reach for the sky!")
         case "no_family":
             narrator_print(
                 "Welcome to Rome, bold one. Please, choose a family name "
@@ -180,6 +184,15 @@ def load_Game(character):
     player_char = Character(
         character['first_name'],
         character['family_name'],
-        character['gender'])
+        character['gender'],
+        character['level'],
+        character['xp'],
+        character['attributes'],
+        character['skills'],
+        character['relationships'],
+        character['inventory'],
+        character['quests'],
+        character['reputation'],
+        character['titles'])
     print(player_char)
     time.sleep(1)
