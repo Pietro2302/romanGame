@@ -2,10 +2,11 @@ from styles import narrator_print
 from rich import box
 from rich.table import Table
 from character_class import Character
-from common_functions import load_characters, save_characters
+from common_functions import load_characters, save_character
 import time
 import questionary
 import os
+import copy
 
 characters_filename = "character_player.json"
 
@@ -136,9 +137,7 @@ def new_Game(console):
     narrator_print(message, console)
 
     player_character = Character(first_name, family_name, gender)
-    characters_dict = load_characters(characters_filename)
-    characters_dict.append(player_character.to_dict())
-    save_characters(characters_filename, characters_dict)
+    save_character(player_character.to_dict())
 
 
 def displaySaveGames(console):
@@ -203,5 +202,4 @@ def load_Game(character):
         character['quests'],
         character['reputation'],
         character['titles'])
-    print(player_char)
     time.sleep(1)

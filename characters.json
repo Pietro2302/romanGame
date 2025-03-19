@@ -1,86 +1,8 @@
-[
-    {
-        "id": "974946cb-7cc9-4a40-9246-dae125494db7",
-        "first_name": "Pietro",
+{
+    "4200b4e9-af47-4a52-ba21-c6786b83265a": {
+        "id": "4200b4e9-af47-4a52-ba21-c6786b83265a",
+        "first_name": "Pietrus",
         "family_name": "Scipio",
-        "gender": "Male",
-        "level": 1,
-        "xp": 0,
-        "attributes": {
-            "strength": 10,
-            "dexterity": 10,
-            "constitution": 10,
-            "intelligence": 10,
-            "wisdom": 10,
-            "charisma": 10
-        },
-        "skills": {},
-        "relationships": {
-            "npc_relations": {},
-            "factions_relations": {}
-        },
-        "inventory": [],
-        "quests": {
-            "active_quests": [],
-            "completed_quests": []
-        },
-        "reputation": {
-            "military": 0,
-            "noble": 0,
-            "religious": 0,
-            "popular": 0,
-            "feared": 0
-        },
-        "titles": {}
-    },
-    {
-        "id": "43436ae0-f530-479c-8510-9c4c8c659a58",
-        "first_name": "Eugenios",
-        "family_name": "Scipio",
-        "gender": "Male",
-        "level": 0,
-        "xp": 0,
-        "attributes": {
-            "strength": 15,
-            "dexterity": 16,
-            "constitution": 18,
-            "intelligence": 19,
-            "wisdom": 20,
-            "charisma": 0
-        },
-        "skills": {},
-        "relationships": {},
-        "inventory": {},
-        "quests": {},
-        "reputation": {},
-        "titles": {}
-    },
-    {
-        "id": "1612de76-9d8a-4acb-b0b2-cedf3d547bac",
-        "first_name": "",
-        "family_name": "Scipio",
-        "gender": "SDAK",
-        "level": 0,
-        "xp": 0,
-        "attributes": {
-            "strength": 10,
-            "dexterity": 10,
-            "constitution": 10,
-            "intelligence": 10,
-            "wisdom": 10,
-            "charisma": 10
-        },
-        "skills": {},
-        "relationships": {},
-        "inventory": {},
-        "quests": {},
-        "reputation": {},
-        "titles": {}
-    },
-    {
-        "id": "3ddb248d-f765-4643-af5e-af66ad481518",
-        "first_name": "Lucius",
-        "family_name": "Flavius",
         "gender": "Male",
         "level": 0,
         "xp": 0,
@@ -99,15 +21,81 @@
         "reputation": {},
         "titles": {}
     },
-    {
-        "id": "1a103e56-3d7f-4e56-bf59-ca61456fc6b3",
-        "first_name": "Mahsahaha",
+    "a99c8f89-c880-44b1-a44d-8c6a7fd0aa87": {
+        "id": "a99c8f89-c880-44b1-a44d-8c6a7fd0aa87",
+        "first_name": "Massarius",
         "family_name": "Scipio",
-        "gender": "shad",
+        "gender": "Males",
+        "level": 2,
+        "xp": 0,
+        "attributes": {
+            "strength": 12,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    "c808d53b-d5e6-4aa5-aaef-3a54fbd875c9": {
+        "id": "c808d53b-d5e6-4aa5-aaef-3a54fbd875c9",
+        "first_name": "MYNAIUS",
+        "family_name": "Scipio",
+        "gender": "MASDL",
+        "level": 2,
+        "xp": 0,
+        "attributes": {
+            "strength": 12,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    "92f0296c-29cd-49ff-8d1b-b2c0ef0fe8a3": {
+        "id": "92f0296c-29cd-49ff-8d1b-b2c0ef0fe8a3",
+        "first_name": "sdhdahashdna",
+        "family_name": "Scipio",
+        "gender": "sdopoo",
         "level": 0,
         "xp": 0,
         "attributes": {
             "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10
+        },
+        "skills": {},
+        "relationships": {},
+        "inventory": {},
+        "quests": {},
+        "reputation": {},
+        "titles": {}
+    },
+    "114ffc6c-3e82-4735-8a1c-5165e8c86452": {
+        "id": "114ffc6c-3e82-4735-8a1c-5165e8c86452",
+        "first_name": "fhshdbaschdbashd ",
+        "family_name": "Scipio",
+        "gender": "asdnasjca",
+        "level": 2,
+        "xp": 0,
+        "attributes": {
+            "strength": 12,
             "dexterity": 10,
             "constitution": 10,
             "intelligence": 10,
@@ -121,4 +109,4 @@
         "reputation": {},
         "titles": {}
     }
-]
+}

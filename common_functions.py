@@ -1,6 +1,7 @@
 import json
 from enum import Enum
-
+import os
+FILENAME = "characters.json"
 
 class MessageType(Enum):
     INFO = "INFO"             # General information
@@ -14,19 +15,26 @@ class MessageType(Enum):
     SYSTEM = "SYSTEM"
 
 
-def load_characters(filename):
-    try:
-        with open(filename, "r") as json_file:
-            type(json_file)
-            return json.load(json_file)
-    except FileNotFoundError:
-        return []
+def load_characters():
+    """Load characters from a JSON file as a dictionary, using character ID as the key."""
+    if os.path.exists(FILENAME):
+        with open(FILENAME, "r") as json_file:
+            try:
+                return json.load(json_file)  # Load as dictionary
+            except json.JSONDecodeError:
+                return {}  # If file is empty or corrupted, return an empty dictionary
+    return {}  # If file does not exist, return an empty dictionary
 
+def save_character(new_character):
+    """Save or update a character in the JSON file, using character ID as the key."""
+    characters = load_characters()  # Load existing characters
 
-def save_characters(filename, characters_dict):
-    with open(filename, "w") as json_file:
-        json.dump(characters_dict, json_file, indent=4)
+    character_id = new_character["id"]  # Use ID as the key
+    characters[character_id] = new_character  # Update or add new character
 
+    # Save the updated dictionary back to the file
+    with open(FILENAME, "w") as json_file:
+        json.dump(characters, json_file, indent=4)
 
 class GameMessage:
     def __init__(self, message_type, content, sender=None, recipient=None):
